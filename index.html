@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links de Redes Sociais</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #222, #000);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Estilos para a animação de chuva */
+        #chuva {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .gota {
+            position: absolute;
+            background-color: rgba(204, 212, 219, 0.6);
+            width: 2px;
+            height: 10px;
+            border-radius: 50%;
+            animation-name: cair; /* Adicionando a animação */
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            z-index: 1000;
+        }
+
+        @keyframes cair {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .foto-perfil-container {
+            margin-top: 100px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            z-index: 3;
+        }
+
+        .foto-perfil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            z-index: 3;
+        }
+
+        .social-icons a {
+            margin: 0 15px;
+            font-size: 36px;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fdfeff;
+        }
+
+        .social-icons a.instagram:hover {
+            color: #e4405f;
+        }
+
+        .social-icons a.github:hover {
+            color: #fff;
+        }
+
+        .social-icons a.linkedin:hover {
+            color: #0077b5;
+        }
+
+        .texto-centralizado {
+            text-align: center;
+            font-size: 18px;
+            z-index: 3;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+            border-top: 2px solid #00ffff;
+            box-shadow: 0px -2px 10px rgba(0, 255, 255, 0.5);
+            animation: pulse 2s infinite alternate, neonGlow 2s infinite alternate;
+            font-family: 'Arial Black', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            z-index: 3;
+        }
+
+        @keyframes pulse {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes neonGlow {
+            from {
+                text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+                border-color: #00ffff;
+            }
+            to {
+                text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+                border-color: #00ffff;
+            }
+        }
+
+        .ghibli-char {
+            position: absolute;
+            animation: float 4s infinite alternate;
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .char1 {
+            top: 20%;
+            left: 10%;
+            width: 100px;
+        }
+
+        .char2 {
+            top: 50%;
+            right: 15%;
+            width: 120px;
+        }
+
+        .char3 {
+            bottom: 20%;
+            left: 25%;
+            width: 110px;
+        }
+
+        .minha-foto {
+            top: 30%;
+            left: 40%;
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .foto-perfil-container {
+                margin-top: 50px;
+            }
+            .social-icons a {
+                font-size: 24px;
+            }
+            .texto-centralizado {
+                font-size: 16px;
+            }
+            footer {
+                padding: 15px;
+            }
+
+            .ghibli-char, .minha-foto {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="chuva"></div>
+    <div class="foto-perfil-container">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQFXCHS8qO51WQ/profile-displayphoto-shrink_800_800/B4EZRMiCMNHAAc-/0/1736450778664?e=1749081600&v=beta&t=tacw99aG16HaBBvb2lGxjDUnKbIxmGQ0L5YJioM05uw" alt="Foto de Perfil" class="foto-perfil">
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com/_Zappeline" target="_blank" rel="noopener noreferrer" class="instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Zappeline" target="_blank" rel="noopener noreferrer" class="github" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/lucas-zappeline-16b222346/" target="_blank" rel="noopener noreferrer" class="linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="texto-centralizado">
+        <h1>Lucas Zappeline Augustin</h1>
+        <p>Formado em Tecnico em Logistica - IENH</p>
+        <p>Cursando Tecnologo em Analise e Desenvolvimento de Sistema - IENH</p>
+    </div>
+
+    <footer>
+        <p>© 2025 Lucas Zappeline Augustin. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function criarChuva() {
+            const numGotas = 200;
+            const chuvaContainer = document.getElementById('chuva');
+
+            for (let i = 0; i < numGotas; i++) {
+                const gota = document.createElement('div');
+                gota.className = 'gota';
+                gota.style.left = `${Math.random() * 100}vw`;
+                gota.style.top = `${Math.random() * 100}vh`;
+                gota.style.animationDelay = `${Math.random()}s`;
+                gota.style.animationDuration = `${Math.random() * 2 + 1}s`;
+                chuvaContainer.appendChild(gota);
+            }
+        }
+
+        criarChuva();
+    </script>
+</body>
+</html>
